@@ -1,0 +1,13 @@
+var myApp = angular.module("mymodule", []);
+myApp.controller("mycontroller", function($scope) {
+  $scope.a = "";
+  var users = [
+    { user: "barney", age: 36, active: true },
+    { user: "fred", age: 40, active: false },
+    { user: "pebbles", age: 1, active: true }
+  ];
+
+  var a = _.find(users, { age: 36, active: true });
+  console.log(a);
+  $scope.a = a;
+});
